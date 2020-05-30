@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1004245365290",
+    "firebase_url": "https://realtimefb-543bc.firebaseio.com",
+    "project_id": "realtimefb-543bc",
+    "storage_bucket": "realtimefb-543bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004245365290:android:b2b5d0afe7a0aa598a0953",
+        "android_client_info": {
+          "package_name": "com.example.myfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004245365290-lcg8hgf3c2aug474j12v6spg6rk7dod3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myfirebase",
+            "certificate_hash": "ad26c47c84223321bc8373e1bf2ceb490a0f0d6e"
+          }
+        },
+        {
+          "client_id": "1004245365290-2ea1a38k1d3rk67ud873n8gv596bk2ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeZIq-K7HjZaSh18e0Rd-kIVsi7mTIUJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004245365290-2ea1a38k1d3rk67ud873n8gv596bk2ou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
