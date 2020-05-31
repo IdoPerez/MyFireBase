@@ -20,6 +20,11 @@ import java.util.ArrayList;
 import static com.example.myfirebase.FBref.refGrades;
 import static com.example.myfirebase.FBref.refStudents;
 
+/**
+ * @author Ido Perez
+ * @since 2.9.03
+ *  @version 001
+ */
 public class Infore extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView listView;
     ArrayList<String> stuList = new ArrayList<>();
@@ -30,7 +35,7 @@ public class Infore extends AppCompatActivity implements AdapterView.OnItemClick
     ArrayList<Grades> graValues = new ArrayList<>();
     ValueEventListener graListener;
 
-    int itemDelete, Type;
+    int itemDelete = -1, Type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,10 @@ public class Infore extends AppCompatActivity implements AdapterView.OnItemClick
 
     }
 
+    /**
+     * the method reads from the firebase and present the values in listview,
+     * @param view
+     */
     public void GB(View view) {
         Type = 1;
         graList.clear();
@@ -69,6 +78,10 @@ public class Infore extends AppCompatActivity implements AdapterView.OnItemClick
 
     }
 
+    /**
+     * the method reads from the firebase and present the values in listview,
+     * @param view
+     */
     public void SB(View view) {
         Type = 2;
         stuList.clear();
@@ -93,10 +106,14 @@ public class Infore extends AppCompatActivity implements AdapterView.OnItemClick
         refStudents.addValueEventListener(stuListener);
     }
 
+    /**
+     * the method delete the chosen item from the listview.
+     * @param view
+     */
     public void Delete(View view) {
-        if(Type == 1){
+        if(Type == 1 && itemDelete > -1){
             refGrades.child(graValues.get(itemDelete).getName()).removeValue();
-        } else{
+        } else if(itemDelete > -1){
             refStudents.child(stuValues.get(itemDelete).getName()).removeValue();
         }
     }

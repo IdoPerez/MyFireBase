@@ -12,6 +12,11 @@ import android.widget.EditText;
 import static com.example.myfirebase.FBref.refGrades;
 import static com.example.myfirebase.FBref.refStudents;
 
+/**
+ * @author Ido Perez
+ * @since 2.9.03
+ * @version 001
+ */
 public class MainActivity extends AppCompatActivity {
     EditText Name,Address, Phone_Num, Home_Num,Father,Mother,Mom_Num, Dad_Num, NameGrade, Quarter, Subject,Grade ;
     @Override
@@ -35,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Grade = (EditText) findViewById(R.id.Grade);
     }
 
+    /**
+     * the method reads from the edit text and put the data in the firebase,
+     * @param view
+     */
     public void GB(View view) {
 
         String name = NameGrade.getText().toString();
@@ -46,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
         refGrades.child(name).setValue(Grade);
     }
 
-
+    /**
+     * the method reads from the edit text and put the data in the firebase,
+     * @param view
+     */
     public void SB(View view) {
         String st[] = new String[8];
         st[0] = Name.getText().toString();
